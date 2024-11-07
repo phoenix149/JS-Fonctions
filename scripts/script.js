@@ -42,11 +42,52 @@
 
 // // ------------------------------------------------------------------------------------------------------------------------------------------
 
-// //Exercice 3 :
+// // //Exercice 3 :
 
-let s_phrase = prompt("Écrivez votre phrase");
-let s_lettre_choisie = prompt("Saisir la lettre que vous souhaitez compter");
-let i_compteur = 1;
+// let s_phrase = prompt("Écrivez votre phrase");
+// let s_lettre_choisie = prompt("Saisir la lettre que vous souhaitez compter");
+// let i_compteur = 1;
+
+// ------------------------------------------------------------------------------------------------------------------------------------------
 
 
+// Exercice 4 :
 
+    let i_menuselecteur = parseInt(prompt("1-- Multiples"+ "\n" + "\n" +"2-- Somme et moyenne"+ "\n" + "\n" +"3-- Recherche du nombre de voyelles"+ "\n" + "\n" +"4-- Recherche du nombre des caractères suivants"+ "\n" + "\n" +"Saisissez le numéro de l'option que vous avez choisie" ));
+
+    
+    if (i_menuselecteur == 1) {
+        alert("option 1 : en cours de création");
+    }
+    else if (i_menuselecteur == 2) {
+        sommeMoyenne();
+
+    }
+    else if (i_menuselecteur == 3) {
+        alert("option 3 : en cours de création");
+
+    }
+    else if (i_menuselecteur == 4) {
+        alert("option 4 : en cours de création");
+
+    }
+    else if ((i_menuselecteur < 1) || (i_menuselecteur > 4)) {
+        alert("l'option que vous avez choisie n'existe pas.");
+    }
+
+
+function sommeMoyenne() {
+    let iNb;
+    let i_Compteur = parseInt(0);
+    let i_Somme = parseInt(0);
+    let i_Moyenne = parseFloat(0);
+
+    while (iNb != 0) {
+        iNb = parseInt(prompt("Saisir un nombre"));
+        i_Somme += iNb;
+        i_Compteur++;
+
+    }
+    i_Moyenne = i_Somme / (i_Compteur - 1);
+    console.log("La somme de tout les nombres que vous avez entrés est de : " + i_Somme + " et la moyenne est de :" + i_Moyenne);
+}
